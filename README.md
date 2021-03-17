@@ -28,9 +28,9 @@ the receipt.
 
 2. Enter item one by one and press `Enter` twice to execute the project.
 
-    1, book, 12.49
-    1, music cd, 14.99
-    1, chocolate bar, 0.85
+    - 1, book, 12.49
+    - 1, music cd, 14.99
+    - 1, chocolate bar, 0.85
 
 
 ## Test the project
