@@ -1,44 +1,41 @@
 # Sales::Tax
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sales/tax`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Coding Challenge
 
-TODO: Delete this and the text above, and describe your gem
+Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical
+products that are exempt. Import duty is an additional sales tax applicable on all imported
+goods at a rate of 5%, with no exemptions.
 
-## Installation
+When I purchase items, I receive a receipt that lists the name of all the items and their price
+(including tax), finishing with the total cost of the items, and the total amounts of sales taxes
+paid. The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains
+(np/100 rounded up to the nearest 0.05) amount of sales tax.
 
-Add this line to your application's Gemfile:
+Write an application that prints out the receipt details for these shopping baskets; this
+application should be written in Ruby [1] and use Rspec [2] to test inputs and the expected
+outputs. The output should be to standard out or CSV. The application is to be shared via a
+Github [3] repository link.
 
-```ruby
-gem 'sales-tax'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install sales-tax
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sales-tax. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/sales-tax/blob/master/CODE_OF_CONDUCT.md).
+Proper object orientated design is important. Each row in the input represents a line item of
+the receipt.
 
 
-## License
+## To run the project
+1. Run
+    $ ruby entry_point.rb
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+2. Enter item one by one and press `Enter` twice to execute the project.
+    1, book, 12.49
+    1, music cd, 14.99
+    1, chocolate bar, 0.85
 
-## Code of Conduct
 
-Everyone interacting in the Sales::Tax project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/sales-tax/blob/master/CODE_OF_CONDUCT.md).
+## Test the project
+
+    $ rspec spec
+
+
+## Assumptions
+
+1. Quantity & Price are positive whole numbers
+2. Imported items should have a word 'imported' in them

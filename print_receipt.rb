@@ -1,13 +1,15 @@
 class PrintReceipt
 
-  def self.format_receipt(receipt)
-    i = 0
+  def self.format_receipt receipt
+    count = 0
     output = ''
-    while i < receipt.items_list.length
-      output += "#{receipt.items_list[i].quantity}#{receipt.items_list[i].is_imported ? ' imported' : ''} #{receipt.items_list[i].name}: #{'%.02f' % receipt.items_list[i].price}\n"
-      i += 1
+
+    while count < receipt.items_list.length
+      output += "#{receipt.items_list[count].quantity} #{receipt.items_list[count].name}: #{'%.02f' % receipt.items_list[count].price}\n"
+      count += 1
     end
-    output + "Sales Taxes: #{'%.02f' % receipt.calculate_taxes}\nTotal: #{'%.02f' % receipt.calculate_total}"
+
+    output + "\nSales Taxes: #{'%.02f' % receipt.total_sales_tax}\nTotal: #{'%.02f' % receipt.total_amount}"
   end
 
 end

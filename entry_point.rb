@@ -11,12 +11,12 @@ class EntryPoint
         puts "All items entered"
         break
       else
-        receipt.add_item(item)
+        receipt.add_item item
       end
     end
 
     puts '==============='
-    puts PrintReceipt.format_receipt(receipt)
+    puts PrintReceipt.format_receipt receipt
     puts '==============='
   end
 end
