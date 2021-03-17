@@ -31,6 +31,8 @@ the receipt.
     - 1, book, 12.49
     - 1, music cd, 14.99
     - 1, chocolate bar, 0.85
+    - 1, imported box of chocolates, 10.00
+    - 1, imported bottle of perfume, 27.99
 
 
 ## Test the project
