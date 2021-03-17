@@ -22,7 +22,9 @@ the receipt.
 
 ## To run the project
 1. Run
-    $ ruby entry_point.rb
+  ```
+  $ ruby entry_point.rb
+  ```
 
 2. Enter item one by one and press `Enter` twice to execute the project.
     1, book, 12.49
@@ -31,8 +33,10 @@ the receipt.
 
 
 ## Test the project
-
-    $ rspec spec
+  Run
+  ```
+  $ rspec spec
+  ```
 
 
 ## Assumptions
